@@ -10,10 +10,10 @@ export class DashboardComponent implements OnInit {
 
   devices:Device[];
   constructor(private manageDevicesService:ManageDevicesService) {
-    this.devices=this.manageDevicesService.getDeviceList();
   }
 
   ngOnInit() {
+    this.devices=this.manageDevicesService.devices;
   }
 
   getDeviceList(){

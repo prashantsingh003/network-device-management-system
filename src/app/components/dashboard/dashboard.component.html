@@ -4,14 +4,14 @@
 <div>
   <mat-grid-list cols="2" rowHeight="3:1">
     <mat-grid-tile *ngFor="let device of devices">
-      <mat-card class="mat-elevation-z3 device">
+      <mat-card class="mat-elevation-z3 device" appMaterialElevation>
         <mat-card-content>{{ device.name }}</mat-card-content>
       </mat-card>
     </mat-grid-tile>
-  <mat-grid-tile [colspan]="2" [rowspan]="1">
-    <mat-card  class="mat-elevation-z3" style="height: 50%; aspect-ratio: 1/1;">
-        <mat-icon>add</mat-icon>
-    </mat-card>
-  </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+      <mat-card appMaterialElevation style="height: 50%; aspect-ratio: 1/1;">
+          <mat-icon>add</mat-icon>
+      </mat-card>
+    </mat-grid-tile>
   </mat-grid-list>
 </div>
