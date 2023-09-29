@@ -29,7 +29,7 @@
     </table>
   </mat-card-content>
   <mat-card-actions class="d-flex">
-    <button mat-button appMaterialElevation (click)="toggleDeviceStatus()">
+    <button mat-raised-button appMaterialElevation (click)="toggleDeviceStatus()"  color="warn">
       {{device.active ? 'Disable' : 'Enable'}}
     </button>
     <span class="spacer"></span>
