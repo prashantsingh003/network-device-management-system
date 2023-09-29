@@ -34,7 +34,14 @@ export class DashboardComponent implements OnInit {
   totalDevices(){
     return this.deviceList.length;
   }
-  deviceWidth(){
-    return screen.width
+  deviceBrands(){
+    const brands={};
+    this.deviceList.forEach(el=>brands[el.brand]='')
+    return Object.keys(brands);
+  }
+  deviceTypes(){
+    const types={};
+    this.deviceList.forEach(el=>types[el.type]='')
+    return Object.keys(types);
   }
 }

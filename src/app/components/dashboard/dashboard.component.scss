@@ -1,0 +1,15 @@
+table{
+  margin: auto;
+  td{
+    padding: 6px;
+  }
+  td:first-child{
+    font-size: 1.6em;
+    font-weight: 400;
+  }
+  td:last-child{
+    font-size: 1.3em;
+    font-weight: 400;
+    text-align: center;
+  }
+}

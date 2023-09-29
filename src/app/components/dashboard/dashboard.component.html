@@ -1,10 +1,37 @@
 <div>
   <mat-card>
-    <mat-card-title class="text-center">Analytics</mat-card-title>
+    <mat-card-title class="text-center mat-display-1">Analytics</mat-card-title>
     <mat-card-content>
-      <div>total devices: {{totalDevices()}}</div>
-      <div>total Active devices: {{activeDevices()}}</div>
-      <div>total Inactive devices: {{inactiveDevices()}}</div>
+      <table>
+        <tr>
+          <td>Total Devices</td>
+          <td>{{totalDevices()}}</td>
+        </tr>
+        <tr>
+          <td>Total Active Devices</td>
+          <td>{{activeDevices()}}</td>
+        </tr>
+        <tr>
+          <td>Total Inactive Devices</td>
+          <td>{{inactiveDevices()}}</td>
+        </tr>
+        <tr>
+          <td>Devices Types</td>
+          <td>
+            <mat-chip-list>
+              <mat-chip *ngFor="let type of deviceTypes()"> {{type}} </mat-chip>
+            </mat-chip-list>
+          </td>
+        </tr>
+        <tr>
+          <td>Devices Brands</td>
+          <td>
+            <mat-chip-list>
+              <mat-chip *ngFor="let type of deviceBrands()"> {{type}} </mat-chip>
+            </mat-chip-list>
+          </td>
+        </tr>
+      </table>
     </mat-card-content>
   </mat-card>
   <app-device-list></app-device-list>

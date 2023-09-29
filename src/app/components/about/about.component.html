@@ -1,3 +1,91 @@
-<p>
-  about works!
-</p>
+<div class="card-container">
+  <mat-card>
+    <div class="text-center mat-display-2 py-4">
+      Network Device Management System
+    </div>
+  </mat-card>
+  <mat-card appMaterialElevation>
+    <mat-card-title>Primary Features</mat-card-title>
+    <mat-card-content>
+      <ol>
+        <li>Add device</li>
+        <li>Edit device</li>
+        <li>Device detail page</li>
+        <li>Device search functionality</li>
+        <li>Dashboard statics</li>
+        <li>Search device</li>
+      </ol>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card appMaterialElevation>
+    <mat-card-title>Routes</mat-card-title>
+    <mat-card-content>
+      <ul>
+        <li>/dashboard : analytics and device list</li>
+        <li>/devices: list of all the present devices</li>
+        <li>/device/:id : device complete information</li>
+        <li>/about : basic information about the project</li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+  <mat-card appMaterialElevation>
+    <mat-card-title>Services</mat-card-title>
+    <mat-card-content>
+      <ul>
+        <li>Manage devices service: Keeps and maintains the list of devices. <strong>(CRUD)</strong></li>
+        <li>Snackbar message service: To display and notify user about updates</li>
+        <li>Modal service: Manages dynamic components i.e. Edit Device Modal, Add Device Modal</li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+  <mat-card appMaterialElevation>
+    <mat-card-title>Custom Directive</mat-card-title>
+    <mat-card-content>
+      <ul>
+        <li>Angular material elevation Directive: Changes elevation (box-shadow) on hover</li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+  <mat-card appMaterialElevation>
+    <mat-card-title>Primary Components</mat-card-title>
+    <mat-card-content>
+      <ul>
+        <li>Components</li>
+        <li>Device list</li>
+        <li>Device detail</li>
+        <li>Search device</li>
+        <li>Navbar</li>
+        <li>About</li>
+        <li>Page not found</li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+  <mat-card appMaterialElevation>
+    <mat-card-title>Modal components</mat-card-title>
+    <mat-card-subtitle>Components used as a pop over (dialogs)</mat-card-subtitle>
+    <mat-card-content>
+      <ul>
+        <li>Add device component</li>
+        <li>Edit device component</li>
+        <li>Confirmation box</li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+  <mat-card appMaterialElevation>
+    <mat-card-title>Model used</mat-card-title>
+    <mat-card-subtitle>(object class)</mat-card-subtitle>
+    <mat-card-content>
+      Device:
+      <ul>
+        <li>name : string</li>
+        <li>brand : string</li>
+        <li>version : string | number</li>
+        <li>active : boolean = true</li>
+        <li>description? : string</li>
+        <li>type? : any</li>
+        <li>index? : number</li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+</div>
