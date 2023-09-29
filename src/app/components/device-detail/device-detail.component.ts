@@ -26,18 +26,18 @@ export class DeviceDetailComponent implements OnInit {
     .subscribe(
       (prams:Params)=>{
         this.setDevice(prams['id']);
+        this.deviceIndex=prams['id'];
       }
     )
   }
   setDevice(index){
-    this.deviceIndex=index;
     this.device=this.deviceService.getDevice(index);
   }
 
   addDevice(){
     this.modalService.openAddDeviceDialog();
   }
-  editDevice(){
+  async editDevice(){
     const device=this.deviceService.getDevice(this.deviceIndex);
     device['index']=this.deviceIndex;
     this.modalService.openEditDeviceDialog(device);

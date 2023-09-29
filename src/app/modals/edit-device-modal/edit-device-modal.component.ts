@@ -27,7 +27,7 @@ export class EditDeviceModalComponent implements OnInit {
   }
   submit(){
     if(this.deviceForm.invalid) return;
-    this.manageDevicesService.addDevice(this.deviceForm.value);
+    this.manageDevicesService.updateDevice(this.device.index,this.deviceForm.value);
     this.deviceForm.reset();
   }
 }
