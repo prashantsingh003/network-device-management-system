@@ -14,6 +14,8 @@ import { MaterialElevationDirective } from './directives/material-elevation.dire
 import { ConfirmationBoxComponent } from './modals/confirmation-box/confirmation-box.component';
 import { AddDeviceModalComponent } from './modals/add-device-modal/add-device-modal.component';
 import { EditDeviceModalComponent } from './modals/edit-device-modal/edit-device-modal.component';
+import { DeviceDetailComponent } from './components/device-detail/device-detail.component';
+import { DeviceListComponent } from './components/device-list/device-list.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { EditDeviceModalComponent } from './modals/edit-device-modal/edit-device
     ConfirmationBoxComponent,
     AddDeviceModalComponent,
     EditDeviceModalComponent,
+    DeviceDetailComponent,
+    DeviceListComponent,
   ],
   entryComponents:[
     AddDeviceModalComponent,

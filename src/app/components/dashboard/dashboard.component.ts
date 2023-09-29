@@ -22,6 +22,20 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.deviceList=this.manageDevicesService.devices;
   }
+  activeDevices(){
+    let count=0;
+    this.deviceList.forEach(el=>{
+      if(el.active) count++;
+    })
+    return count;
+  }
+  inactiveDevices(){
+    let count=0;
+    this.deviceList.forEach(el=>{
+      if(!el.active) count++;
+    })
+    return count;
+  }
   addDevice(){
     this.modalService.openAddDeviceDialog();
   }

@@ -1,46 +1,51 @@
 <div>
-  <mat-grid-list cols="2" rowHeight="3:1">
-    <mat-grid-tile *ngFor="let device of deviceList; index as index">
-      <mat-card class="mat-elevation-z3 device" appMaterialElevation>
-        <mat-card-content>
-          <!-- NESTED GRID -->
-          <mat-grid-list cols="4" rowHeight="100%">
-
-            <mat-grid-tile colspan="1">
-              <mat-icon
-                [color]="device.active ? 'primary' : 'error'"
-                class="router-icon"
-              >router</mat-icon>
-            </mat-grid-tile>
-
-            <mat-grid-tile colspan="3">
-              <mat-card class="mat-elevation-z0 device p-0 m-0 mx-2">
-                <mat-card-title>
-                  {{ device.name | uppercase }}
-                </mat-card-title>
-                <mat-card-subtitle>
-                  <span>{{ device.brand }}</span>
-                </mat-card-subtitle>
-                <!-- <mat-card-content>{{ device.description }}</mat-card-content> -->
-                <mat-card-actions>
-                  <button mat-button (click)="toggleDeviceStatus(index)">Toggle</button>
-                  <button mat-button (click)="editDevice(index)">Edit</button>
-                  <button mat-raised-button (click)="deleteDevice(index)">Delete</button>
-                </mat-card-actions>
-              </mat-card>
-            </mat-grid-tile>
-
-          </mat-grid-list>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="2" [rowspan]="1">
-      <mat-card
-        appMaterialElevation
-        style="height: 50%; aspect-ratio: 1/1"
-        (click)="addDevice()"
+  <mat-card>
+    <mat-card-title class="text-center">Analytics</mat-card-title>
+    <mat-card-content>
+      <div>total Active devices: {{activeDevices()}}</div>
+      <div>total Inactive devices: {{inactiveDevices()}}</div>
+    </mat-card-content>
+  </mat-card>
+  <div class="text-center" style="margin: 20px 0;">
+    <span class="m-3">
+      <button 
+      mat-fab extended 
+      color="ascent" 
+      appMaterialElevation 
+      (click)="addDevice()"
+      matTooltip="Add Device!"
+      matTooltipPosition="right"
       >
         <mat-icon>add</mat-icon>
+      </button>
+    </span>
+  </div>
+  <mat-grid-list cols="2" rowHeight="275px">
+    <mat-grid-tile *ngFor="let device of deviceList; index as index">
+      <mat-card class="mat-elevation-z3 grid-device" appMaterialElevation>
+        <mat-card-header>
+          <div mat-card-avatar>
+            <button 
+            mat-fab 
+            [matTooltip]="device.active ? 'Active' : 'Inactive'"
+            matTooltipPosition="left"
+            [color]="device.active ? 'primary' : 'warn'" 
+            (click)="toggleDeviceStatus(index)">
+              <mat-icon>router</mat-icon>
+            </button>
+          </div>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{ device.name | uppercase }}</mat-card-title>
+          <mat-card-subtitle>{{ device.brand }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>{{ device.description }}</mat-card-content>
+        <mat-card-actions class="d-flex">
+          <button mat-button appMaterialElevation (click)="toggleDeviceStatus(index)">Toggle</button>
+          <span class="spacer"></span>
+          <button mat-raised-button appMaterialElevation color="primary" (click)="editDevice(index)">Edit</button>
+          <button mat-raised-button appMaterialElevation color="primary" (click)="deleteDevice(index)">Delete</button>
+          <a mat-raised-button appMaterialElevation color="primary" [routerLink]="['/device',index]">View Device</a>
+        </mat-card-actions>
       </mat-card>
     </mat-grid-tile>
   </mat-grid-list>

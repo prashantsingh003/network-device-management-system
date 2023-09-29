@@ -19,9 +19,11 @@ import { MatProgressBarModule } from '@angular/material/progress-bar'
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { MatTooltipModule } from '@angular/material';
 
 export const MaterialComponents=[
   MatGridListModule,
+  MatTooltipModule,
   MatDialogModule,
   MatSortModule,
   MatButtonModule,
