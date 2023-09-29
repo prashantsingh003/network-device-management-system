@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>Are you sure you wish to delete this device</h2>
+<mat-dialog-actions>
+  <button 
+    mat-raised-button 
+    mat-dialog-close
+    [mat-dialog-close]="true"
+    appMaterialElevation color="info"
+  >Continue</button>
+  <button 
+    mat-stroked-button 
+    [mat-dialog-close]="false"
+    appMaterialElevation 
+    color="primary"
+  >Cancel</button>
+</mat-dialog-actions>

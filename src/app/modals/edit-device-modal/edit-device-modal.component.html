@@ -1,0 +1,38 @@
+<div>
+  <div class="fw-bold"><h3>Edit Device: {{ device.name }}</h3></div>
+  <div>
+    <form [formGroup]="deviceForm" (ngSubmit)="submit()">
+      <div class="my-4" style="display: grid;">
+        <mat-form-field>
+            <input matInput placeholder="Name" formControlName="name" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Brand" formControlName="brand" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Description" formControlName="description">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Version" formControlName="version" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Type" formControlName="type">
+        </mat-form-field>
+        <span class="text-danger" *ngIf="deviceForm.invalid && deviceForm.touched">Please make sure the data is correct</span>
+      </div>
+      <button mat-raised-button appMaterialElevation color="primary" class="w-100" type="submit">Submit</button>
+    </form>
+    <button 
+      mat-stroked-button
+      mat-dialog-close 
+      color="primary" 
+      class="w-100 my-3"
+      appMaterialElevation
+    >
+    Cancel</button>
+  </div>
+  <!-- <div class="text-secondary">
+    Create an account? 
+    <a class="text-primary" [mat-dialog-close]="{'signup':true}">Sign up</a>
+  </div> -->
+</div>

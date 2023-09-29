@@ -1,15 +1,36 @@
 <mat-toolbar class="app-navbar mat-elevation-z3" color="primary">
   <div>
-    <a [routerLink]="['/home']" >Network Device Management System</a>
+    <a [routerLink]="['/home']" class="mx-2">Device Management System</a>
   </div>
   <span class="spacer"></span>
   
-  <div class="right-items">
+  <div class="d-none d-sm-inline right-items">
     <!-- <mat-form-field c>
       <input type="tel" matInput placeholder="Search">
     </mat-form-field> -->
     <a [routerLink]="['/home']">Home</a>
     <a [routerLink]="['/devices']">Devices</a>
     <a [routerLink]="['/about']">About</a>
+    <button mat-button (click)="addDevice()">Add Device</button>
+  </div>  
+  <div class="d-block d-sm-none">
+    <!-- TRIGGER FOR MENU -->
+    <button mat-icon-button [matMenuTriggerFor]="dropdown">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #dropdown="matMenu" xPosition="before">
+      <a mat-menu-item [routerLink]="['/home']">
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
+      </a>
+      <a mat-menu-item [routerLink]="['/devices']">
+        <mat-icon>router</mat-icon>
+        <span>Devices</span>
+      </a>
+      <a mat-menu-item [routerLink]="['/about']">
+        <mat-icon>info</mat-icon>
+        <span>About</span>
+      </a>
+    </mat-menu>
   </div>
 </mat-toolbar>

@@ -14,9 +14,10 @@ export class Device {
     public brand: string,
     public version: string | number,
 
+    public active:boolean=true,
+    
+    public description?:string,
     public type?: any,
-
-    public id?: string,
-    public status?: any,
+    public index?: number,
   ) {}
 }

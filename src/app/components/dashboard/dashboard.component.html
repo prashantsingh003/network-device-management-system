@@ -1,16 +1,46 @@
 <div>
-  <mat-icon>router</mat-icon>
-</div>
-<div>
   <mat-grid-list cols="2" rowHeight="3:1">
-    <mat-grid-tile *ngFor="let device of devices">
+    <mat-grid-tile *ngFor="let device of deviceList; index as index">
       <mat-card class="mat-elevation-z3 device" appMaterialElevation>
-        <mat-card-content>{{ device.name }}</mat-card-content>
+        <mat-card-content>
+          <!-- NESTED GRID -->
+          <mat-grid-list cols="4" rowHeight="100%">
+
+            <mat-grid-tile colspan="1">
+              <mat-icon
+                [color]="device.active ? 'primary' : 'error'"
+                class="router-icon"
+              >router</mat-icon>
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan="3">
+              <mat-card class="mat-elevation-z0 device p-0 m-0 mx-2">
+                <mat-card-title>
+                  {{ device.name | uppercase }}
+                </mat-card-title>
+                <mat-card-subtitle>
+                  <span>{{ device.brand }}</span>
+                </mat-card-subtitle>
+                <!-- <mat-card-content>{{ device.description }}</mat-card-content> -->
+                <mat-card-actions>
+                  <button mat-button (click)="toggleDeviceStatus(index)">Toggle</button>
+                  <button mat-button (click)="editDevice(index)">Edit</button>
+                  <button mat-raised-button (click)="deleteDevice(index)">Delete</button>
+                </mat-card-actions>
+              </mat-card>
+            </mat-grid-tile>
+
+          </mat-grid-list>
+        </mat-card-content>
       </mat-card>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="2" [rowspan]="1">
-      <mat-card appMaterialElevation style="height: 50%; aspect-ratio: 1/1;">
-          <mat-icon>add</mat-icon>
+      <mat-card
+        appMaterialElevation
+        style="height: 50%; aspect-ratio: 1/1"
+        (click)="addDevice()"
+      >
+        <mat-icon>add</mat-icon>
       </mat-card>
     </mat-grid-tile>
   </mat-grid-list>
