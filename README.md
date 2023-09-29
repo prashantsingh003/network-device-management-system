@@ -1,8 +1,7 @@
 # NetworkDeviceManagementSystem
 
 ## Run the commands in the same order to run the project:
-npm install
-ng serve
+- npm install -ng serve
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
