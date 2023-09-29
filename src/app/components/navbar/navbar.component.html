@@ -3,16 +3,18 @@
     <a [routerLink]="['/home']" class="mx-2">Device Management System</a>
   </div>
   <span class="spacer"></span>
-  
+
   <div class="d-none d-sm-inline right-items">
-    <!-- <mat-form-field c>
-      <input type="tel" matInput placeholder="Search">
-    </mat-form-field> -->
-    <a [routerLink]="['/home']">Home</a>
+    <a [routerLink]="['/home']">Dashboard</a>
     <a [routerLink]="['/devices']">Devices</a>
     <a [routerLink]="['/about']">About</a>
-    <button mat-button (click)="addDevice()">Add Device</button>
+    <a (click)="addDevice()">Add Device</a>
   </div>  
+
+  <span class="spacer"></span>
+  
+  <app-search class="d-none d-sm-inline"></app-search>
+
   <div class="d-block d-sm-none">
     <!-- TRIGGER FOR MENU -->
     <button mat-icon-button [matMenuTriggerFor]="dropdown">

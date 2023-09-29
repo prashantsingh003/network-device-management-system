@@ -1,0 +1,13 @@
+table{
+  td{
+    padding: 6px;
+  }
+  td:first-child{
+    font-size: 1.6em;
+    font-weight: 500;
+  }
+  td:last-child{
+    font-size: 1.3em;
+    font-weight: 500;
+  }
+}

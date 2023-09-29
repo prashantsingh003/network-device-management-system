@@ -16,6 +16,8 @@ import { AddDeviceModalComponent } from './modals/add-device-modal/add-device-mo
 import { EditDeviceModalComponent } from './modals/edit-device-modal/edit-device-modal.component';
 import { DeviceDetailComponent } from './components/device-detail/device-detail.component';
 import { DeviceListComponent } from './components/device-list/device-list.component';
+import { AboutComponent } from './components/about/about.component';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { DeviceListComponent } from './components/device-list/device-list.compon
     EditDeviceModalComponent,
     DeviceDetailComponent,
     DeviceListComponent,
+    AboutComponent,
+    SearchComponent,
   ],
   entryComponents:[
     AddDeviceModalComponent,

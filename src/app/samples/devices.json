@@ -4,7 +4,7 @@
     "version": "5.1",
     "brand": "Cisco",
     "description": "Router1 is a high-performance networking device designed for large-scale enterprise networks. It offers advanced features for routing data between networks, ensuring secure connections through VPNs, and optimizing network traffic. With Cisco's reputation for quality, Router1 is a reliable choice for your organization's network needs.",
-    "id": "12345",
+    "index": 0,
     "type": "Router",
     "active": false
   },
@@ -13,7 +13,7 @@
     "version": "2.0",
     "brand": "D-Link",
     "description": "Switch1 is a 24-port managed switch ideal for office use. It provides network segmentation and management with D-Link's quality assurance. It's an active device, ensuring smooth office network operations.",
-    "id": "67890",
+    "index": 1,
     "type": "Switch",
     "active": true
   },
@@ -22,7 +22,7 @@
     "version": "3.5",
     "brand": "Fortinet",
     "description": "Firewall1 is an enterprise-grade firewall with advanced security features. Fortinet's reputation for cybersecurity makes it a top choice for protecting your network against threats. It's an active guardian for your network.",
-    "id": "54321",
+    "index": 2,
     "type": "Firewall",
     "active": true
   },
@@ -31,7 +31,7 @@
     "version": "4.2",
     "brand": "Linksys",
     "description": "AccessPoint1 is a wireless access point for home and small office use. Linksys delivers reliable dual-band WiFi, ensuring seamless connectivity for your devices.",
-    "id": "98765",
+    "index": 3,
     "type": "Access Point",
     "active": false
   },
@@ -40,7 +40,7 @@
     "version": "2.1",
     "brand": "HP",
     "description": "Switch2 is an 8-port unmanaged switch designed for small networks. It's a cost-effective solution for expanding your network's capacity.",
-    "id": "24680",
+    "index": 4,
     "type": "Switch",
     "active": true
   },
@@ -49,7 +49,7 @@
     "version": "4.0",
     "brand": "Juniper",
     "description": "Router2 is a mid-range router with VPN support, making it suitable for remote access and secure connections. It's currently inactive but ready for deployment when needed.",
-    "id": "13579",
+    "index": 5,
     "type": "Router",
     "active": false
   },
@@ -58,7 +58,7 @@
     "version": "3.3",
     "brand": "Netgear",
     "description": "AccessPoint2 is a dual-band WiFi access point designed for home users. It provides reliable and fast wireless connectivity for all your home devices.",
-    "id": "86420",
+    "index": 6,
     "type": "Access Point",
     "active": true
   }

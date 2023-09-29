@@ -1,3 +1,39 @@
-<p>
-  device-detail works!
-</p>
+<mat-card class="mat-elevation-z3">
+  <mat-card-title style="opacity: 0.8;" class="text-center">{{ device.name | uppercase }}</mat-card-title>
+  <mat-card-content>
+    <table>
+      <tr>
+        <td>Version:</td>
+        <td>{{device.version}}</td>
+      </tr>
+      <tr>
+        <td>Brand:</td>
+        <td>{{device.brand}}</td>
+      </tr>
+      <tr>
+        <td>Description:</td>
+        <td>{{device.description}}</td>
+      </tr>
+      <tr>
+        <td>INDEX:</td>
+        <td>{{device.index}}</td>
+      </tr>
+      <tr>
+        <td>Type:</td>
+        <td>{{device.type}}</td>
+      </tr>
+      <tr>
+        <td>Status:</td>
+        <td>{{device.active?'Active':'Inactive'}}</td>
+      </tr>
+    </table>
+  </mat-card-content>
+  <mat-card-actions class="d-flex">
+    <button mat-button appMaterialElevation (click)="toggleDeviceStatus()">
+      {{device.active ? 'Disable' : 'Enable'}}
+    </button>
+    <span class="spacer"></span>
+    <button mat-raised-button appMaterialElevation color="primary" (click)="editDevice()">Edit</button>
+    <button mat-raised-button appMaterialElevation color="primary" (click)="deleteDevice()">Delete</button>
+  </mat-card-actions>
+</mat-card>
